@@ -44,8 +44,16 @@ async function sendMail(user, callback) {
     from: '"HungryTime"<example.gimail.com>', // sender address
     to: user.email, // list of receivers
     subject: "Thanks for subscribing to HungryTime 🍖🥗", // Subject line
-    html: `<h1>Hi ${user.name}</h1><br>
-    <h4>Thanks for subscribing to our newsletter.</h4>`
+    html: `
+        <h1>Hi ${user.name}</h1>
+        <h4>Thanks for subscribing to our newsletter.</h4>
+        <p>Now you will receive a weekly newsletter which consists new recipes to try out, more about fitness and healthy foods. Hope you will like our weekly newsletter.&nbsp;</p>
+        <p>By the time you receive one, why not try some of these recipes.</p>
+        <p><a href="https://saptarshi-mitra.github.io/food-app/details/642245"><img src="https://spoonacular.com/recipeImages/642245-312x231.jpg" width="228" height="168" /></a>&nbsp;&nbsp;&nbsp;<a href="https://saptarshi-mitra.github.io/food-app/details/652134"><img src="https://spoonacular.com/recipeImages/652134-312x231.jpg" width="228" height="168" /></a></p>
+        <p>&nbsp;</p>
+        <p>Thanks,</p>
+        <p>Team Hungry Time</p>
+    `
   };
 
   // send mail with defined transport object
